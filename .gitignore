@@ -1,0 +1,8 @@
+# Terraform 관련 파일
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# 인증키 정보를 담은 변수 파일 (생성 예정)
+terraform.tfvars

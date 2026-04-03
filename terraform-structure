@@ -1,0 +1,9 @@
+my-kakaocloud-infra/
+├── modules/
+│   └── compute/
+│       ├── main.tf       # VM 생성 리소스 정의
+│       ├── variables.tf  # 모듈에서 사용할 변수
+│       └── outputs.tf    # 생성 후 출력할 값
+├── main.tf               # 모듈을 호출하는 메인 파일
+├── variables.tf          # 전체 프로젝트 변수
+└── .gitignore            # 깃 제외 목록
