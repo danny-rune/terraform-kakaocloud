@@ -12,6 +12,7 @@ provider "kakaocloud" {
   access_secret_key = var.secret_key
   region            = "kr-central-1"
 }
+#key는 로컬에서 별도로 관리
 
 module "my_vm" {
   source        = "./modules/compute"
