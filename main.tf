@@ -15,8 +15,9 @@ provider "kakaocloud" {
 
 module "my_vm" {
   source        = "./modules/compute"
-  instance_name = "test-server"
-  image_id      = "이미지-ID-입력"
-  flavor_id     = "플레이버-ID-입력"
-  vpc_id        = "VPC-ID-입력"
+  for_each = toset(var.vm_names)
+  instance_name = each.key
+  image_id      = var.image_id
+  flavor_id     = var.flavor_id
+  vpc_id        = var.vpc_id
 }
